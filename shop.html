@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>WMD ASSIGNMENT</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+<header>
+  <div class="logo">ELEVATE FITNESS</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="fitnessguides.html">Fitness Guides</a>
+    <a href="workoutplans.html">Workout Plans</a>
+    <a href="workoutvideos.html">Workout Videos</a>
+    <a href="nutrition.html">Nutrition</a>
+    <a href="membership.html">Membership</a>
+    <a href="shop.html">Shop</a>
+    <a href="tips.html">Tips</a>
+  </nav>
+</header>
+
+<!-- SHOP SECTION -->
+<section class="shop">
+  <h1>Shop</h1>
+
+  <div class="products">
+
+    <div class="product-card">
+      <img src="images/liftingstraps.jpg" alt="Lifting Straps">
+      <h3>Lifting Straps</h3>
+      <p>$50</p>
+      <button>BUY</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/figure8liftingstraps.jpg" alt="Figure 8 LS">
+      <h3>Figure 8 LS</h3>
+      <p>$60</p>
+      <button>BUY</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/wriststraps.jpg" alt="Wrist Staps">
+      <h3>Wrist Straps</h3>
+      <p>$45</p>
+      <button>BUY</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/waterbottle.jpg" alt="Water Bottle">
+      <h3>Water Bottle</h3>
+      <p>$30</p>
+      <button>BUY</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/backpack.jpg" alt="Backpack">
+      <h3>Backpack</h3>
+      <p>$60</p>
+      <button>BUY</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/duffelbag.jpg" alt="Duffel Bag">
+      <h3>Duffel Bag</h3>
+      <p>$70</p>
+      <button>BUY</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/sharkheadcap.jpg" alt="SharkHead Cap">
+      <h3>Shark Head Cap</h3>
+      <p>$20</p>
+      <button>BUY</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/liftinggloves.jpg" alt="Lifting Gloves">
+      <h3>Lifting Gloves</h3>
+      <p>$45</p>
+      <button>BUY</button>
+      </div>
+  </div>
+</section>
+ 
+
+<footer>
+  <p>@ ELEVATE FITNESS 2026</p>
+</footer>
+
+
+<script id="t3s7og">
+const links = document.querySelectorAll("nav a");
+
+links.forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    link.style.transform = "scale(1.1)";
+    link.style.color = "#adb5bd";
+    link.style.transition = "0.3s";
+  });
+
+  link.addEventListener("mouseleave", () => {
+    link.style.transform = "scale(1)";
+    link.style.color = "white";
+  });
+});
+</script>
+
+</body>
+</html>

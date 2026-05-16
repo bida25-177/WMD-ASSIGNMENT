@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>WMD ASSIGNMENT</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+<header>
+  <div class="logo">ELEVATE FITNESS</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="fitnessguides.html">Fitness Guides</a>
+    <a href="workoutplans.html">Workout Plans</a>
+    <a href="workoutvideos.html">Workout Videos</a>
+    <a href="nutrition.html">Nutrition</a>
+    <a href="membership.html">Membership</a>
+    <a href="shop.html">Shop</a>
+    <a href="tips.html">Tips</a>
+  </nav>
+</header>
+
+<footer>
+  <p>@ ELEVATE FITNESS 2026</p>
+</footer>
+
+<script id="t3s7og">
+const links = document.querySelectorAll("nav a");
+
+links.forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    link.style.transform = "scale(1.1)";
+    link.style.color = "#adb5bd";
+    link.style.transition = "0.3s";
+  });
+
+  link.addEventListener("mouseleave", () => {
+    link.style.transform = "scale(1)";
+    link.style.color = "white";
+  });
+});
+</script>
+</body>
+</html>
