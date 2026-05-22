@@ -9,18 +9,34 @@
 </head>
 <body>
 <header>
-  <div class="logo">ELEVATE FITNESS</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="fitnessguides.html">Fitness Guides</a>
-    <a href="workoutplans.html">Workout Plans</a>
-    <a href="workoutvideos.html">Workout Videos</a>
-    <a href="nutrition.html">Nutrition</a>
-    <a href="membership.html">Membership</a>
-    <a href="shop.html">Shop</a>
-    <a href="tips.html">Tips</a>
-  </nav>
+
+    <div class="logo">ELEVATE FITNESS</div>
+
+    <!-- MENU BUTTON -->
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <nav id="navbar">
+
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="fitnessguides.html">Fitness Guides</a>
+        <a href="workoutplans.html">Workout Plans</a>
+        <a href="workoutvideos.html">Workout Videos</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="membership.html">Membership</a>
+        <a href="shop.html">Shop</a>
+        <a href="tips.html">Tips</a>
+        <a href="#vision">Vision</a>
+        <a href="cart.html">Cart</a>
+
+
+    </nav>
+
 </header>
 
 <!-- SHOP SECTION -->
@@ -33,82 +49,133 @@
       <img src="images/liftingstraps.jpg" alt="Lifting Straps">
       <h3>Lifting Straps</h3>
       <p>$50</p>
-      <button>BUY</button>
+      <button onclick="addToCart('Lifting Straps', 50)">
+        Add To Cart
+      </button>
     </div>
 
     <div class="product-card">
       <img src="images/figure8liftingstraps.jpg" alt="Figure 8 LS">
       <h3>Figure 8 LS</h3>
       <p>$60</p>
-      <button>BUY</button>
+      <button onclick="addToCart('Figure 8 LS', 60)">
+        Add To Cart
+      </button>
     </div>
 
     <div class="product-card">
       <img src="images/wriststraps.jpg" alt="Wrist Staps">
       <h3>Wrist Straps</h3>
       <p>$45</p>
-      <button>BUY</button>
+      <button onclick="addToCart('Wrist Straps', 45)">
+        Add To Cart
+      </button>
     </div>
 
     <div class="product-card">
       <img src="images/waterbottle.jpg" alt="Water Bottle">
       <h3>Water Bottle</h3>
       <p>$30</p>
-      <button>BUY</button>
+      <button onclick="addToCart('Water Bottle', 30)">
+        Add To Cart
+      </button>
     </div>
 
     <div class="product-card">
       <img src="images/backpack.jpg" alt="Backpack">
       <h3>Backpack</h3>
       <p>$60</p>
-      <button>BUY</button>
+      <button onclick="addToCart('Backpack', 60)">
+        Add To Cart
+      </button>
     </div>
 
     <div class="product-card">
       <img src="images/duffelbag.jpg" alt="Duffel Bag">
       <h3>Duffel Bag</h3>
       <p>$70</p>
-      <button>BUY</button>
+      <button onclick="addToCart('Duffel Bag', 70)">
+        Add To Cart
+      </button>
     </div>
 
     <div class="product-card">
       <img src="images/sharkheadcap.jpg" alt="SharkHead Cap">
       <h3>Shark Head Cap</h3>
       <p>$20</p>
-      <button>BUY</button>
+      <button onclick="addToCart('SharkHead Cap', 20)">
+        Add To Cart
+      </button>
     </div>
 
     <div class="product-card">
       <img src="images/liftinggloves.jpg" alt="Lifting Gloves">
       <h3>Lifting Gloves</h3>
       <p>$45</p>
-      <button>BUY</button>
+      <button onclick="addToCart('Lifting Gloves', 45)">
+        Add To Cart
+      </button>
       </div>
   </div>
 </section>
  
+
 
 <footer>
   <p>@ ELEVATE FITNESS 2026</p>
 </footer>
 
 
-<script id="t3s7og">
+<script>
+
+function addToCart(product, price) {
+
+    // GET EXISTING CART
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // ADD NEW PRODUCT
+    cart.push({
+        product: product,
+        price: price
+    });
+
+    // SAVE TO LOCAL STORAGE
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // SUCCESS MESSAGE
+    alert(product + " added to cart!");
+}
+
+/* NAVIGATION HOVER EFFECT */
+
 const links = document.querySelectorAll("nav a");
 
 links.forEach(link => {
-  link.addEventListener("mouseenter", () => {
-    link.style.transform = "scale(1.1)";
-    link.style.color = "#adb5bd";
-    link.style.transition = "0.3s";
-  });
 
-  link.addEventListener("mouseleave", () => {
-    link.style.transform = "scale(1)";
-    link.style.color = "white";
-  });
+    link.addEventListener("mouseenter", () => {
+
+        link.style.transform = "scale(1.1)";
+        link.style.color = "#adb5bd";
+        link.style.transition = "0.3s";
+    });
+
+    link.addEventListener("mouseleave", () => {
+
+        link.style.transform = "scale(1)";
+        link.style.color = "white";
+    });
 });
-</script>
 
+/* MOBILE MENU */
+
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+
+    navbar.classList.toggle("active");
+});
+
+</script>
 </body>
 </html>

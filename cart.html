@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEVATE FITNESS CART</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">ELEVATE FITNESS</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="fitnessguides.html">Fitness Guides</a>
+        <a href="workoutplans.html">Workout Plans</a>
+        <a href="workoutvideos.html">Workout Videos</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="membership.html">Membership</a>
+        <a href="shop.html">Shop</a>
+        <a href="tips.html">Tips</a>
+        <a href="#vision">Vision</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+
+</header>
+
+<!-- PAGE CONTENT -->
+
+<main class="page-content">
+
+    <!-- CART SECTION -->
+
+    <section class="cart-page">
+
+        <h1>Your Shopping Cart</h1>
+
+        <!-- CART ITEMS -->
+
+        <ul id="cart-items"></ul>
+
+        <!-- TOTAL -->
+
+        <h2>
+            Total: $<span id="total">0</span>
+        </h2>
+
+        <!-- CLEAR CART -->
+
+        <button onclick="clearCart()" class="cart-btn">
+            Clear Cart
+        </button>
+
+        <!-- PAYMENT SECTION -->
+
+        <div class="payment-section">
+
+            <h2>Credit Card Information</h2>
+
+            <input type="text" id="card-name" placeholder="Cardholder Name">
+
+            <input type="text" id="card-number" placeholder="Card Number">
+
+            <input type="text" id="expiry" placeholder="MM/YY">
+
+            <input type="text" id="cvv" placeholder="CVV">
+
+            <button onclick="goToCheckout()" class="checkout-btn">
+                Proceed To Checkout
+            </button>
+
+            <p id="success-message">
+                Payment Successful! Thank you for your purchase.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>@ ELEVATE FITNESS 2026</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    // LOAD CART FROM LOCAL STORAGE
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let cartItems = document.getElementById("cart-items");
+
+    let total = 0;
+
+    // DISPLAY ITEMS
+
+    cart.forEach(item => {
+
+        let li = document.createElement("li");
+
+        li.textContent = item.product + " - P" + item.price;
+
+        cartItems.appendChild(li);
+
+        total += item.price;
+    });
+
+    // DISPLAY TOTAL
+
+    document.getElementById("total").textContent = total;
+
+    // CLEAR CART
+
+    function clearCart() {
+
+        localStorage.removeItem("cart");
+
+        location.reload();
+    }
+
+    // CHECKOUT
+
+    function checkout() {
+
+        const name = document.getElementById("card-name").value;
+        const card = document.getElementById("card-number").value;
+        const expiry = document.getElementById("expiry").value;
+        const cvv = document.getElementById("cvv").value;
+
+        if(name === "" || card === "" || expiry === "" || cvv === "") {
+
+            alert("Please complete all payment information.");
+
+        } else if(cart.length === 0) {
+
+            alert("Your cart is empty.");
+
+        } else {
+
+            document.getElementById("success-message").style.display = "block";
+
+            localStorage.removeItem("cart");
+        }
+    }
+
+</script>
+
+</body>
+
+</html>

@@ -7,21 +7,126 @@
     <link rel="stylesheet" href="style.css">
    
 </head>
-<body>
+<body class="fitness-page">
 <header>
-  <div class="logo">ELEVATE FITNESS</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="fitnessguides.html">Fitness Guides</a>
-    <a href="workoutplans.html">Workout Plans</a>
-    <a href="workoutvideos.html">Workout Videos</a>
-    <a href="nutrition.html">Nutrition</a>
-    <a href="membership.html">Membership</a>
-    <a href="shop.html">Shop</a>
-    <a href="tips.html">Tips</a>
-  </nav>
+
+    <div class="logo">ELEVATE FITNESS</div>
+
+    <!-- MENU BUTTON -->
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <nav id="navbar">
+
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="fitnessguides.html">Fitness Guides</a>
+        <a href="workoutplans.html">Workout Plans</a>
+        <a href="workoutvideos.html">Workout Videos</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="membership.html">Membership</a>
+        <a href="shop.html">Shop</a>
+        <a href="tips.html">Tips</a>
+        <a href="#vision">Vision</a>
+        <a href="cart.html">Cart</a>
+
+
+    </nav>
+
 </header>
+
+<main class="page-content">
+
+  <section class="fitness-guides">
+
+    <h1>Fitness Guides</h1>
+
+    <div class="guide-container">
+
+        <!-- MUSCLE BUILDING -->
+
+        <div class="guide-card">
+
+            <h2>Muscle Building</h2>
+
+            <p>
+                Muscle building focuses on strength training and progressive overload to increase muscle size and strength. A proper muscle-building program includes resistance exercises, high protein intake, and adequate recovery time.
+            </p>
+
+            <ul>
+                <li>Strength training workouts</li>
+                <li>High protein nutrition</li>
+                <li>Progressive overload</li>
+                <li>Rest and recovery</li>
+            </ul>
+
+        </div>
+
+        <!-- WEIGHT LOSS -->
+
+        <div class="guide-card">
+
+            <h2>Weight Loss</h2>
+
+            <p>
+                Weight loss programs combine calorie control, cardio exercises, and healthy eating habits to reduce body fat. Consistency and maintaining an active lifestyle are key to long-term results.
+            </p>
+
+            <ul>
+                <li>Calorie deficit diet</li>
+                <li>Cardio training</li>
+                <li>Healthy meal plans</li>
+                <li>Daily physical activity</li>
+            </ul>
+
+        </div>
+
+        <!-- CARDIO -->
+
+        <div class="guide-card">
+
+            <h2>Cardio Training</h2>
+
+            <p>
+                Cardio workouts improve heart health, endurance, and stamina. Common cardio exercises include running, cycling, swimming, and HIIT workouts which help burn calories and improve fitness levels.
+            </p>
+
+            <ul>
+                <li>Improves endurance</li>
+                <li>Boosts heart health</li>
+                <li>Burns calories</li>
+                <li>Increases stamina</li>
+            </ul>
+
+        </div>
+
+        <!-- BEGINNER WORKOUTS -->
+
+        <div class="guide-card">
+
+            <h2>Beginner Workouts</h2>
+
+            <p>
+                Beginner workouts are designed for people starting their fitness journey. These workouts focus on proper form, building consistency, and improving overall fitness gradually and safely.
+            </p>
+
+            <ul>
+                <li>Easy-to-follow routines</li>
+                <li>Focus on proper form</li>
+                <li>Low intensity exercises</li>
+                <li>Builds fitness confidence</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+</main>
 
 <footer>
   <p>@ ELEVATE FITNESS 2026</p>
@@ -42,6 +147,17 @@ links.forEach(link => {
     link.style.color = "white";
   });
 });
+</script>
+
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+});
+
 </script>
 </body>
 </html>

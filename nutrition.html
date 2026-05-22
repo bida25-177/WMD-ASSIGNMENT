@@ -7,21 +7,127 @@
     <link rel="stylesheet" href="style.css">
    
 </head>
-<body>
+<body class="nutrition-page">
 <header>
-  <div class="logo">ELEVATE FITNESS</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="fitnessguides.html">Fitness Guides</a>
-    <a href="workoutplans.html">Workout Plans</a>
-    <a href="workoutvideos.html">Workout Videos</a>
-    <a href="nutrition.html">Nutrition</a>
-    <a href="membership.html">Membership</a>
-    <a href="shop.html">Shop</a>
-    <a href="tips.html">Tips</a>
-  </nav>
+
+    <div class="logo">ELEVATE FITNESS</div>
+
+    <!-- MENU BUTTON -->
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <!-- NAVIGATION -->
+
+     <nav id="navbar">
+
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="fitnessguides.html">Fitness Guides</a>
+        <a href="workoutplans.html">Workout Plans</a>
+        <a href="workoutvideos.html">Workout Videos</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="membership.html">Membership</a>
+        <a href="shop.html">Shop</a>
+        <a href="tips.html">Tips</a>
+        <a href="#vision">Vision</a>
+        <a href="cart.html">Cart</a>
+
+
+    </nav>
+
 </header>
+
+<main class="page-content">
+
+  <section class="nutrition-section">
+
+    <h1>Nutrition Guides</h1>
+
+    <div class="nutrition-container">
+
+        <!-- HIGH PROTEIN DIETS -->
+
+        <div class="nutrition-card">
+
+            <h2>High Protein Diets</h2>
+
+            <p>
+                High protein diets help support muscle growth, recovery, and overall body strength. Protein-rich foods such as chicken, eggs, fish, lean beef, and protein shakes are important for maintaining and building muscle tissue.
+            </p>
+
+            <ul>
+                <li>Supports muscle growth</li>
+                <li>Improves recovery</li>
+                <li>Helps maintain strength</li>
+                <li>Increases daily protein intake</li>
+            </ul>
+
+        </div>
+
+        <!-- BULKING DIETS -->
+
+        <div class="nutrition-card">
+
+            <h2>Diets for Bulking</h2>
+
+            <p>
+                Bulking diets focus on consuming more calories than the body burns in order to gain muscle mass and body weight. These diets include high amounts of carbohydrates, proteins, and healthy fats combined with strength training.
+            </p>
+
+            <ul>
+                <li>Calorie surplus intake</li>
+                <li>High protein meals</li>
+                <li>Complex carbohydrates</li>
+                <li>Supports muscle gain</li>
+            </ul>
+
+        </div>
+
+        <!-- CUTTING DIETS -->
+
+        <div class="nutrition-card">
+
+            <h2>Diets for Cutting</h2>
+
+            <p>
+                Cutting diets are designed to reduce body fat while maintaining muscle mass. These diets focus on controlled calorie intake, high protein consumption, and balanced nutrition combined with cardio and resistance training.
+            </p>
+
+            <ul>
+                <li>Reduces body fat</li>
+                <li>Maintains muscle mass</li>
+                <li>Balanced nutrition plan</li>
+                <li>Combines diet and exercise</li>
+            </ul>
+
+        </div>
+
+        <!-- CALORIE DEFICITS -->
+
+        <div class="nutrition-card">
+
+            <h2>Calorie Deficits</h2>
+
+            <p>
+                A calorie deficit occurs when the body burns more calories than it consumes. This is essential for weight loss and fat reduction. Maintaining a healthy calorie deficit with proper nutrition helps achieve sustainable results safely.
+            </p>
+
+            <ul>
+                <li>Supports weight loss</li>
+                <li>Burns stored body fat</li>
+                <li>Encourages healthy eating</li>
+                <li>Improves long-term fitness goals</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
 
 <footer>
   <p>@ ELEVATE FITNESS 2026</p>
@@ -42,6 +148,17 @@ links.forEach(link => {
     link.style.color = "white";
   });
 });
+</script>
+
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+});
+
 </script>
 </body>
 </html>

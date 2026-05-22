@@ -10,28 +10,68 @@
 
 <body>
 <header>
-  <div class="logo">ELEVATE FITNESS</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="fitnessguides.html">Fitness Guides</a>
-    <a href="workoutplans.html">Workout Plans</a>
-    <a href="workoutvideos.html">Workout Videos</a>
-    <a href="nutrition.html">Nutrition</a>
-    <a href="membership.html">Membership</a>
-    <a href="shop.html">Shop</a>
-    <a href="tips.html">Tips</a>
-  </nav>
+
+    <div class="logo">ELEVATE FITNESS</div>
+
+    <!-- MENU BUTTON -->
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <!-- NAVIGATION -->
+
+     <nav id="navbar">
+
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="fitnessguides.html">Fitness Guides</a>
+        <a href="workoutplans.html">Workout Plans</a>
+        <a href="workoutvideos.html">Workout Videos</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="membership.html">Membership</a>
+        <a href="shop.html">Shop</a>
+        <a href="tips.html">Tips</a>
+        <a href="#vision">Vision</a>
+        <a href="cart.html">Cart</a>
+
+
+    </nav>
 </header>
 
-    <h1>ABOUT US</h1>
-     <p>Elevate Fitness is a platform dedicated to helping individuals begin and maintain their fitness journey.<br>
-       Designes espcially for beginners, our goal is to simplify health and fitness by providing easy-to-follow<br>
-       workout plans, informative guides, and practical tips. We believe that everyone deserves access to reliable<br>
-       fitness knowledge, regardless of their experience level. Whether you're looking to build strength, improve<br>
-       your lifestyle, or stay consistent, Elevate Fitness offers the tools and support you need to grow, improve,<br>
-       and reach your full potential.</p>  
+<main class="page-content">
 
+    <h1>ABOUT US</h1>
+     <p class="center-paragraph">
+      Fitness is a platform dedicated to helping individuals begin and maintain their fitness journey.<br>
+      Designes espcially for beginners, our goal is to simplify health and fitness by providing easy-to-follow<br>
+      workout plans, informative guides, and practical tips. We believe that everyone deserves access to reliable<br>
+      fitness knowledge, regardless of their experience level. Whether you're looking to build strength, improve your<br>
+      lifestyle, or stay consistent, Elevate Fitness offers the tools and support you need to grow, improve, and reach<br>
+      your full potential.</p>  
+
+      <section class="contact-section">
+
+    <h2>Contact Us</h2>
+
+    <p>Email: elevatefitness@gmail.com</p>
+    <p>Phone: +267 75602563</p>
+
+    <form>
+
+        <input type="text" placeholder="Your Name">
+
+        <input type="email" placeholder="Your Email">
+
+        <textarea placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+
+</main>
 <footer>
   <p>@ ELEVATE FITNESS 2026</p>
 </footer>
@@ -51,6 +91,18 @@ links.forEach(link => {
     link.style.color = "white";
   });
 });
+
+</script>
+
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+});
+
 </script>
 </body>
 </html>

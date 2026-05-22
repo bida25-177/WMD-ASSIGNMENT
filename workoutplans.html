@@ -7,21 +7,121 @@
     <link rel="stylesheet" href="style.css">
    
 </head>
-<body>
+<body class="workoutplan-page">
 <header>
-  <div class="logo">ELEVATE FITNESS</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="fitnessguides.html">Fitness Guides</a>
-    <a href="workoutplans.html">Workout Plans</a>
-    <a href="workoutvideos.html">Workout Videos</a>
-    <a href="nutrition.html">Nutrition</a>
-    <a href="membership.html">Membership</a>
-    <a href="shop.html">Shop</a>
-    <a href="tips.html">Tips</a>
-  </nav>
+
+    <div class="logo">ELEVATE FITNESS</div>
+
+    <!-- MENU BUTTON -->
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <!-- NAVIGATION -->
+
+     <nav id="navbar">
+
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="fitnessguides.html">Fitness Guides</a>
+        <a href="workoutplans.html">Workout Plans</a>
+        <a href="workoutvideos.html">Workout Videos</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="membership.html">Membership</a>
+        <a href="shop.html">Shop</a>
+        <a href="tips.html">Tips</a>
+        <a href="#vision">Vision</a>
+        <a href="cart.html">Cart</a>
+
+
+    </nav>
 </header>
+
+<main class="page-content">
+
+  <!-- WORKOUT PLAN CARDS SECTION -->
+<section class="workout-plans">
+
+  <div class="plan-card">
+    <h2>Beginner Plan</h2>
+    <p class="level">Perfect for new lifters</p>
+
+    <ul>
+      <li>3 workout days per week</li>
+      <li>Full body training</li>
+      <li>Focus on form and consistency</li>
+      <li>Compound exercises for faster growth</li>
+      <li>Rest: 60 to 90 seconds between sets</li>
+    </ul>
+
+    <h3>Best Exercises</h3>
+    <p>Squats, Push-Ups, Bench Press, Rows, Shoulder Press, Deadlifts</p>
+
+    <h3>Muscle Building Tips</h3>
+    <p>
+      Train with moderate weights, eat enough protein,
+      and prioritize recovery. Beginners grow fastest
+      by mastering the basics and staying consistent.
+    </p>
+
+    
+  </div>
+
+
+  <div class="plan-card">
+    <h2>Intermediate Plan</h2>
+    <p class="level">For consistent gym-goers</p>
+
+    <ul>
+      <li>4 to 5 workout days per week</li>
+      <li>Push/Pull/Legs split</li>
+      <li>Progressive overload focus</li>
+      <li>Higher training volume</li>
+      <li>Rest: 45 to 75 seconds between sets</li>
+    </ul>
+
+    <h3>Best Exercises</h3>
+    <p>Incline Bench, Pull-Ups, Barbell Squats, Romanian Deadlifts, Dumbbell Press</p>
+
+    <h3>Muscle Building Tips</h3>
+    <p>
+      Increase weight gradually over time, track your workouts,
+      and aim for 7 to 9 hours of sleep. Consistent overload is key
+      for continued muscle growth.
+    </p>
+
+    
+  </div>
+
+
+  <div class="plan-card">
+    <h2>Advanced Plan</h2>
+    <p class="level">High intensity muscle growth</p>
+
+    <ul>
+      <li>5 to 6 workout days per week</li>
+      <li>Advanced hypertrophy training</li>
+      <li>Heavy compound + isolation exercises</li>
+      <li>High volume and intensity techniques</li>
+      <li>Strategic deload and recovery weeks</li>
+    </ul>
+
+    <h3>Best Exercises</h3>
+    <p>Heavy Squats, Weighted Pull-Ups, Bench Press, Deadlifts, Cable Flys, Bulgarian Split Squats</p>
+
+    <h3>Muscle Building Tips</h3>
+    <p>
+      Focus on progressive overload, recovery, nutrition timing,
+      and training close to failure. Advanced lifters need precision
+      and consistency to maximize growth.
+    </p>
+
+   
+  </div>
+
+</section>
+</main>
 
 <footer>
   <p>@ ELEVATE FITNESS 2026</p>
@@ -42,6 +142,17 @@ links.forEach(link => {
     link.style.color = "white";
   });
 });
+</script>
+
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+});
+
 </script>
 </body>
 </html>

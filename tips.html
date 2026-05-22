@@ -7,23 +7,114 @@
     <link rel="stylesheet" href="style.css">
    
 </head>
+
+<body class="tips-page">
 <header>
-  <div class="logo">ELEVATE FITNESS</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="fitnessguides.html">Fitness Guides</a>
-    <a href="workoutplans.html">Workout Plans</a>
-    <a href="workoutvideos.html">Workout Videos</a>
-    <a href="nutrition.html">Nutrition</a>
-    <a href="membership.html">Membership</a>
-    <a href="shop.html">Shop</a>
-    <a href="tips.html">Tips</a>
-  </nav>
+
+    <div class="logo">ELEVATE FITNESS</div>
+
+    <!-- MENU BUTTON -->
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <nav id="navbar">
+
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="fitnessguides.html">Fitness Guides</a>
+        <a href="workoutplans.html">Workout Plans</a>
+        <a href="workoutvideos.html">Workout Videos</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="membership.html">Membership</a>
+        <a href="shop.html">Shop</a>
+        <a href="tips.html">Tips</a>
+        <a href="#vision">Vision</a>
+        <a href="cart.html">Cart</a>
+
+
+    </nav>
+
 </header>
-<body>
-  <h1>TIPS</h1>
-  <p></p>
+
+<main class="page-content">
+
+
+  <section class="tips-section">
+
+    <h1>Fitness Tips</h1>
+
+    <div class="tips-container">
+
+        <!-- STAYING MOTIVATED -->
+
+        <div class="tip-card">
+
+            <h2>Staying Motivated</h2>
+
+            <p>
+                Motivation is important when working towards fitness goals. Setting realistic targets, celebrating progress, and surrounding yourself with positive influences can help you stay focused and inspired throughout your fitness journey.
+            </p>
+
+            <ul>
+                <li>Set achievable goals</li>
+                <li>Track your progress</li>
+                <li>Celebrate small victories</li>
+                <li>Stay positive and focused</li>
+            </ul>
+
+        </div>
+
+        <!-- STAYING CONSISTENT -->
+
+        <div class="tip-card">
+
+            <h2>Staying Consistent</h2>
+
+            <p>
+                Consistency is the key to long-term fitness success. Creating a regular workout routine and maintaining healthy habits over time will help you achieve better results and improve overall health.
+            </p>
+
+            <ul>
+                <li>Create a workout schedule</li>
+                <li>Stay disciplined</li>
+                <li>Exercise regularly</li>
+                <li>Maintain healthy habits</li>
+            </ul>
+
+        </div>
+
+        <!-- TRACKING GOALS -->
+
+        <div class="tip-card">
+
+            <h2>Keeping Track of Your Goals</h2>
+
+            <p>
+                Tracking your goals allows you to monitor your progress and stay accountable. Recording workouts, measurements, and achievements helps you identify improvements and stay committed to your fitness journey.
+            </p>
+
+            <ul>
+                <li>Record workout progress</li>
+                <li>Track body measurements</li>
+                <li>Monitor achievements</li>
+                <li>Review goals regularly</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+  
+</main>
+<footer>
+  <p>@ ELEVATE FITNESS 2026</p>
+</footer>
+</body>
   <script id="t3s7og">
 const links = document.querySelectorAll("nav a");
 
@@ -40,8 +131,16 @@ links.forEach(link => {
   });
 });
 </script>
-</body>
-<footer>
-  <p>@ ELEVATE FITNESS 2026</p>
-</footer>
+
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+});
+
+</script>
+
 </html>

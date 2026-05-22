@@ -1,72 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WMD ASSIGNMENT</title>
+
+    <title>ELEVATE FITNESS</title>
+
     <link rel="stylesheet" href="style.css">
-   
 </head>
 
-
-
 <body>
-<header>
-  <div class="logo">ELEVATE FITNESS</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="fitnessguides.html">Fitness Guides</a>
-    <a href="workoutplans.html">Workout Plans</a>
-    <a href="workoutvideos.html">Workout Videos</a>
-    <a href="nutrition.html">Nutrition</a>
-    <a href="membership.html">Membership</a>
-    <a href="shop.html">Shop</a>
-    <a href="tips.html">Tips</a>
-  </nav>
+
+    <!-- HEADER -->
+
+    <header>
+
+    <div class="logo">ELEVATE FITNESS</div>
+
+    <!-- MENU BUTTON -->
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <!-- NAVIGATION -->
+
+     <nav id="navbar">
+
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="fitnessguides.html">Fitness Guides</a>
+        <a href="workoutplans.html">Workout Plans</a>
+        <a href="workoutvideos.html">Workout Videos</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="membership.html">Membership</a>
+        <a href="shop.html">Shop</a>
+        <a href="tips.html">Tips</a>
+        <a href="#vision">Vision</a>
+        <a href="cart.html">Cart</a>
+
+
+    </nav>
+
 </header>
 
-<div class="center-text">
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <video class="bg-video" autoplay muted loop playsinline>
+            <source src="backgroundvideos/bg-video.mp4.mp4" type="video/mp4">
+        </video>
+
+        <div class="center-text">
+
     <h1>WELCOME TO ELEVATE FITNESS</h1>
 
-    <a href="membership.html" class="btn">
-        Login Screen
-    </a>
 </div>
 
+<div class="bottom-buttons">
 
-<video autoplay muted loop class=""hero-video"
-      autoplay
-muted
-loop
-playsinline
-webkit-playsinline>
-    <source src="bg-video.mp4" type="video/mp4">
-  </video>
+    <a href="membership.html" class="btn">
+        Login/Sign Up
+    </a>
 
-<source src="bg-video.mp4" type="video/mp4">
+</div>
 
+    </section>
 
-<footer>
-  <p>@ ELEVATE FITNESS 2026</p>
-</footer>
+    <!-- VISION SECTION -->
 
-<script id="t3s7og">
-const links = document.querySelectorAll("nav a");
+    <section class="vision-section fade-section" id="vision">
+        <h2>Our Vision</h2>
 
-links.forEach(link => {
-  link.addEventListener("mouseenter", () => {
-    link.style.transform = "scale(1.1)";
-    link.style.color = "#adb5bd";
-    link.style.transition = "0.3s";
-  });
+        <p>
+            The vision of ELEVATE FITNESS is to create a motivating online platform where people can improve their health, share fitness goals, and inspire one another. Our website aims to build a supportive fitness community that encourages users to stay active, track their progress, and achieve their personal fitness goals.
+            <br><br>
+            Members will be able to sign up, access workout plans, watch fitness videos, and learn about proper nutrition and healthy living. Through community interaction and shared motivation, ELEVATE FITNESS hopes to help users stay committed to living healthier and stronger lives.
+        </p>
 
-  link.addEventListener("mouseleave", () => {
-    link.style.transform = "scale(1)";
-    link.style.color = "white";
-  });
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>© ELEVATE FITNESS 2026</p>
+    </footer>
+    <script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
 });
+
+</script>
+
+<script>
+
+const buttons = document.querySelector(".bottom-buttons");
+const visionSection = document.querySelector(".vision-section");
+
+visionSection.appendChild(buttons);
+
 </script>
 
 </body>
+
 </html>
