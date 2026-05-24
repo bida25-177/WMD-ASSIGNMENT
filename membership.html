@@ -43,34 +43,36 @@
 <div class="container mt-4">
   <h2 class="mb-3">Login</h2>
 
-  <form>
+<form id="loginForm">
 
-    <div class="mb-3">
-      <label class="form-label">Email Address</label>
-      <input type="text" class="form-control" placeholder="Your Email">
-    </div>
+  <div class="mb-3">
+    <label class="form-label">Email Address</label>
+    <input type="email" id="email" class="form-control" placeholder="Your Email">
+  </div>
 
-    <div class="mb-3">
-      <label class="form-label">Password</label>
-      <input type="text" class="form-control" placeholder="Your Password">
-    </div>
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" id="password" class="form-control" placeholder="Your Password">
+  </div>
 
-    <div class="mb-3">
-      <label class="form-label">Country</label>
-      <select class="form-select">
-        <option>Botswana</option>
-        <option>South Africa</option>
-        <option>Namibia</option>
-        <option>Mozambique</option>
-        <option>Mauritius</option>
-      </select>
-    </div>
+  <div class="mb-3">
+    <label class="form-label">Country</label>
+    <select class="form-select">
+      <option>Botswana</option>
+      <option>South Africa</option>
+      <option>Namibia</option>
+      <option>Mozambique</option>
+      <option>Mauritius</option>
+    </select>
+  </div>
 
-    <button type="submit" class="btn btn-success w-100">
-      Login
-    </button>
+  <button type="submit" class="btn btn-success w-100">
+    Login
+  </button>
 
-  </form>
+</form>
+
+<p id="message" class="mt-3 text-center"></p>
 </div>
 </main>
 <footer>
@@ -101,6 +103,65 @@ const navbar = document.getElementById("navbar");
 
 menuToggle.addEventListener("click", () => {
     navbar.classList.toggle("active");
+});
+
+</script>
+
+<script id="n3x7qp">
+
+const accounts = [
+  {
+    email: "jaysenbhicoo@gmail.com",
+    password: "180206"
+  },
+  {
+    email: "user2@gmail.com",
+    password: "abcd"
+  },
+  {
+    email: "user3@gmail.com",
+    password: "pass123"
+  },
+  {
+    email: "user4@gmail.com",
+    password: "fitness"
+  },
+  {
+    email: "admin@gmail.com",
+    password: "admin"
+  }
+];
+
+const loginForm = document.getElementById("loginForm");
+const message = document.getElementById("message");
+
+loginForm.addEventListener("submit", function(e) {
+
+  e.preventDefault();
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const validUser = accounts.find(account =>
+    account.email === email &&
+    account.password === password
+  );
+
+  if(validUser) {
+
+    message.innerHTML = "✅ Login Successful!";
+    message.style.color = "lime";
+
+    alert("Welcome back!");
+
+    localStorage.setItem("loggedInUser", email);
+
+  } else {
+
+    message.innerHTML = "❌ Invalid Email or Password";
+    message.style.color = "red";
+  }
+
 });
 
 </script>
