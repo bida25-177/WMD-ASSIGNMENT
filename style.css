@@ -1,4 +1,4 @@
-/* RESET */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,19 +6,19 @@
   font-family: Arial, sans-serif;
 }
 
-/* BODY */
+/* body */
 body {
   background-color: black;
   color: white;
   overflow-x: hidden;
 }
 
-/* SMOOTH SCROLL */
+/* scroll behaviour */
 html {
     scroll-behavior: smooth;
 }
 
-/* BODY */
+/* body */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -26,7 +26,7 @@ body {
     background-color: black;
 }
 
-/* HEADER */
+/* page header */
 header {
     position: fixed;
     top: 0;
@@ -39,13 +39,13 @@ header {
     z-index: 1000;
 }
 
-/* LOGO */
+/* elevatefitness logo */
 .logo {
     font-size: 24px;
     font-weight: bold;
 }
 
-/* NAVIGATION */
+/* nav */
 nav a {
     color: white;
     text-decoration: none;
@@ -58,14 +58,14 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* HERO SECTION */
+/* hero section */
 .hero {
     position: relative;
     height: 100vh;
     overflow: hidden;
 }
 
-/* BACKGROUND VIDEO */
+/* bg video */
 .bg-video {
     position: absolute;
     top: 0;
@@ -76,7 +76,7 @@ nav a:hover {
     z-index: -1;
 }
 
-/* CENTER TEXT */
+/* center text */
 .center-text {
     position: absolute;
     top: 50%;
@@ -85,13 +85,13 @@ nav a:hover {
     text-align: center;
 }
 
-/* MAIN TITLE */
+/* title */
 .center-text h1 {
     font-size: 60px;
     margin-bottom: 20px;
 }
 
-/* BUTTONS */
+/* buttons */
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -116,7 +116,7 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* VISION SECTION */
+/* vision */
 .vision-section {
     padding: 100px 60px;
     background-color: #111;
@@ -136,7 +136,7 @@ nav a:hover {
     font-size: 18px;
     background-color: #111;
 }
-/* VISION TEXT SCROLL ANIMATION */
+/* vision fade animation */
 
 .fade-section {
     opacity: 0;
@@ -159,14 +159,14 @@ nav a:hover {
     }
 }
 
-/* FOOTER */
+/* footer */
 footer {
     background-color: black;
     text-align: center;
     padding: 20px;
 }
 
-/* DARK OVERLAY */
+/* bg video dark overlay */
 body::before {
   content: "";
   position: fixed;
@@ -178,15 +178,13 @@ body::before {
   z-index: -1;
 }
 
-/* CONTENT ABOVE VIDEO */
+
 header, section, footer, nav, h1 {
   position: relative;
   z-index: 1;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* header */
 header {
   background: black;
   padding: 20px;
@@ -199,7 +197,7 @@ header {
   font-weight: bold;
 }
 
-/* NAV */
+/* nav for header */
 nav {
   display: flex;
   justify-content: center;
@@ -219,9 +217,7 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-/* =========================
-   HEADINGS
-========================= */
+/* headings in header */
 h1 {
   text-align: center;
   font-size: 36px;
@@ -234,17 +230,13 @@ h2 {
   text-transform: uppercase;
 }
 
-/* =========================
-   TEXT
-========================= */
+/* headding text */
 p {
   padding: 20px;
   font-size: 18px;
 }
 
-/* =========================
-   CENTER HERO TEXT
-========================= */
+/* center text */
 .center-text {
   position: absolute;
   top: 50%;
@@ -253,7 +245,7 @@ p {
   text-align: center;
 }
 
-/* BUTTONS */
+/* buttons */
 
 .btn {
     display: inline-block;
@@ -270,7 +262,7 @@ p {
     transform: scale(1.05);
 }
 
-/* VISION BUTTONS */
+/* button under vision */
 
 .vision-buttons {
     margin-top: 40px;
@@ -280,22 +272,18 @@ p {
     gap: 20px;
 }
 
-/* VISION SECTION */
+/* vision text */
 
 .vision-section {
     padding: 100px 60px 150px 60px;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/*  */
 section {
   padding: 50px 80px;
 }
 
-/* =========================
-   ABOUT SECTION
-========================= */
+/* About Us page */
 .about {
   display: flex;
   justify-content: space-between;
@@ -315,7 +303,7 @@ section {
   background: #ffff;
 }
 
-/* CONTACT SECTION */
+/* contact section */
 
 .contact-section {
     padding: 80px;
@@ -323,7 +311,7 @@ section {
     background-color: #000000;
 }
 
-/* FORM */
+/* contact form */
 
 .contact-section form {
     display: flex;
@@ -331,7 +319,7 @@ section {
     align-items: center;
 }
 
-/* INPUTS + TEXTAREA */
+/* contact input area */
 
 .contact-section input,
 .contact-section textarea {
@@ -345,14 +333,14 @@ section {
     font-size: 16px;
 }
 
-/* MESSAGE BOX */
+/* message box */
 
 .contact-section textarea {
     height: 150px;
     resize: none;
 }
 
-/* BUTTON */
+/* send message button */
 
 .contact-section button {
     padding: 12px 25px;
@@ -369,12 +357,7 @@ section {
     background-color: #adb5bd;
 }
 
-/* =========================
-   FITNESS GUIDES
-========================= */
-
-
-/* FITNESS GUIDES SECTION */
+/* Fitness Guides page */
 
 .fitness-page{
     background-image: url("images/background-img1.jpg");
@@ -392,7 +375,7 @@ section {
     text-align: center;
 }
 
-/* GUIDE CONTAINER */
+/* fitness guide container */
 
 .guide-container {
     display: grid;
@@ -401,7 +384,7 @@ section {
     margin-top: 50px;
 }
 
-/* GUIDE CARDS */
+/* fitness guide cards */
 
 .guide-card {
     background-color: #1a1a1a;
@@ -411,28 +394,28 @@ section {
     text-align: left;
 }
 
-/* HOVER EFFECT */
+/* card animation */
 
 .guide-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
-/* CARD HEADINGS */
+/* card headings */
 
 .guide-card h2 {
     margin-bottom: 15px;
     color: #adb5bd;
 }
 
-/* CARD TEXT */
+/* card info */
 
 .guide-card p {
     line-height: 1.7;
     margin-bottom: 20px;
 }
 
-/* LIST */
+/* list in card */
 
 .guide-card ul {
     padding-left: 20px;
@@ -444,10 +427,7 @@ section {
 
 
 
-/* =========================
-   WORKOUT PLANS
-========================= */
-/* WORKOUT PLAN SECTION */
+/* Workout plan page */
 
 .workoutplan-page{
     background-image: url("images/background-img2.jpg");
@@ -516,9 +496,7 @@ section {
 
 
 
-/* =========================
-   VIDEOS
-========================= */
+/* Workout Videos page */
 .video-section {
     padding: 100px 50px;
     text-align: center;
@@ -562,9 +540,7 @@ section {
     box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
-/* =========================
-   SHOP / PRODUCTS GRID
-========================= */
+/* Shop page */
 .products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -604,9 +580,7 @@ button:hover {
   background: white;
 }
 
-/* =========================
-   GRID IMAGE STYLE
-========================= */
+/* shop grid */
 .grid-img {
   width: 100%;
   height: 300px;
@@ -620,10 +594,7 @@ button:hover {
   filter: blur(3px);
 }
 
-/* =========================
-   FOOTER
-========================= */
-/* FOOTER */
+/* footer */
 
 footer {
     background: black;
@@ -633,9 +604,7 @@ footer {
     width: 100%;
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
+/* cart */
 @media (max-width: 1024px) {
   .products {
     grid-template-columns: repeat(2, 1fr);
@@ -666,7 +635,7 @@ button:hover {
   padding: 0;
 }
 
-/* HEADER */
+/* header */
 
 header {
     position: fixed;
@@ -681,21 +650,19 @@ header {
     box-sizing: border-box;
 }
 
-/* LOGO */
+/* logo */
 
 .logo {
     font-size: 24px;
     font-weight: bold;
 }
 
-/* NAVIGATION */
+/* navigation */
 
 nav {
     display: flex;
     gap: 20px;
 }
-
-/* NAV LINKS */
 
 nav a {
     color: white;
@@ -708,7 +675,7 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* MENU BUTTON */
+/* menu btn */
 
 .menu-toggle {
     display: none;
@@ -717,7 +684,7 @@ nav a:hover {
     color: white;
 }
 
-/* MOBILE + WINDOWED RESPONSIVE MENU */
+/* Mobile screen view */
 
 @media (max-width: 1000px) {
 
@@ -751,13 +718,13 @@ nav a:hover {
     }
 }
 
-/* PAGE CONTENT SPACING */
+/* page content spacing */
 
 .page-content {
     padding-top: 120px;
 }
 
-/* CART SECTION */
+/* Cart page */
 
 .cart-section {
     background-color: #1a1a1a;
@@ -765,8 +732,6 @@ nav a:hover {
     margin: 50px;
     border-radius: 10px;
 }
-
-/* CART LIST */
 
 #cart {
     list-style: none;
@@ -781,19 +746,19 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* TOTAL */
+/* total */
 
 .cart-section h3 {
     margin-bottom: 30px;
 }
 
-/* PAYMENT SECTION */
+/* payment section */
 
 .payment-section {
     margin-top: 30px;
 }
 
-/* INPUTS */
+/* detail inputs */
 
 .payment-section input {
     width: 100%;
@@ -803,14 +768,14 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* CHECKOUT BUTTON */
+/* chck out btn */
 
 .checkout-btn {
     width: 100%;
     padding: 12px;
 }
 
-/* TIPS SECTION */
+/* Tips page */
 
 .tips-page{
     background-image: url("images/background-img4.jpg");
@@ -828,7 +793,6 @@ nav a:hover {
     text-align: center;
 }
 
-/* TIPS CONTAINER */
 
 .tips-container {
     display: grid;
@@ -837,7 +801,6 @@ nav a:hover {
     margin-top: 50px;
 }
 
-/* TIP CARDS */
 
 .tip-card {
     background-color: #1a1a1a;
@@ -847,28 +810,24 @@ nav a:hover {
     transition: 0.3s;
 }
 
-/* HOVER EFFECT */
 
 .tip-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
-/* CARD HEADINGS */
 
 .tip-card h2 {
     margin-bottom: 15px;
     color: #adb5bd;
 }
 
-/* CARD TEXT */
 
 .tip-card p {
     line-height: 1.7;
     margin-bottom: 20px;
 }
 
-/* LIST */
 
 .tip-card ul {
     padding-left: 20px;
@@ -879,8 +838,7 @@ nav a:hover {
 }
 
 
-
-/* NUTRITION SECTION */
+/* Nutrition page */
 
 .nutrition-page{
     background-image: url("images/background-img3.jpg");
@@ -897,7 +855,7 @@ nav a:hover {
     text-align: center;
 }
 
-/* NUTRITION CONTAINER */
+
 
 .nutrition-container {
     display: grid;
@@ -906,7 +864,7 @@ nav a:hover {
     margin-top: 50px;
 }
 
-/* NUTRITION CARDS */
+
 
 .nutrition-card {
     background-color: #1a1a1a;
@@ -916,28 +874,28 @@ nav a:hover {
     transition: 0.3s;
 }
 
-/* HOVER EFFECT */
+
 
 .nutrition-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
-/* CARD HEADINGS */
+
 
 .nutrition-card h2 {
     margin-bottom: 15px;
     color: #adb5bd;
 }
 
-/* CARD TEXT */
+
 
 .nutrition-card p {
     line-height: 1.7;
     margin-bottom: 20px;
 }
 
-/* LIST */
+
 
 .nutrition-card ul {
     padding-left: 20px;
